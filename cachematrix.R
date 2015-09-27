@@ -1,5 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+
+## There are two functions below designed to help reduce costly computation by caching the inverse of a matrix
+
+## makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.
+## cacheSolve: This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+## If the inverse has already been calculated (and the matrix has not changed), then cachesolve retrieve 
+## the inverse from the cache.
+## Computing the inverse of a square matrix is done with the solve function in R; assumes matrix is invertible
+
 
 ## makeCacheMatrix function creates a special "matrix", 
 ## which is a list containing a function to
@@ -52,7 +59,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
 ## cacheSolve is designed to work with makeCacheMatrix is storing and retrieving cached Inverse results for a matrix
 ## if you supply a cacheSolve matrix as the argument, it'll return the cached inverse result if it has already been calculated; 
 ## if not, then it will perform the inverse calcuation. You can tell if the result was pulled from cache based on 
